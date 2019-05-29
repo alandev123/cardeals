@@ -2,12 +2,54 @@ function n(){
 	
 	var valname= /^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/ ;
 	$name= document.getElementById('name').value;
-	
+	document.getElementById('namep').innerHTML='';
 	if(!valname.test($name)){
      
-      alert("Enter valid name");
-	   document.getElementById('name').value='';
+      
+	   document.getElementById('namep').innerHTML='Enter a valid name';
 	   $("#name").focus();
+      return false;
+    }
+	
+}
+function city(){
+	
+	var valname1= /^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/ ;
+	$city= document.getElementById('city').value;
+	document.getElementById('cityp').innerHTML='';
+	if(!valname1.test($city)){
+     
+      
+	   document.getElementById('cityp').innerHTML='Enter a valid State';
+	   $("#city").focus();
+      return false;
+    }
+	
+}
+function dis(){
+	
+	var valname2= /^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/ ;
+	$dis= document.getElementById('dis').value;
+	document.getElementById('disp').innerHTML='';
+	if(!valname2.test($dis)){
+     
+      
+	   document.getElementById('disp').innerHTML='Enter a valid District';
+	   $("#dis").focus();
+      return false;
+    }
+	
+}
+function state(){
+	
+	var valname3= /^[a-zA-Z]+[\-'\s]?[a-zA-Z ]+$/ ;
+	$state= document.getElementById('state').value;
+	document.getElementById('statep').innerHTML='';
+	if(!valname3.test($state)){
+     
+      
+	   document.getElementById('statep').innerHTML='Enter a valid State';
+	   $("#state").focus();
       return false;
     }
 	
@@ -18,11 +60,10 @@ function n(){
 function p(){
   var val_phone=  /^[0-9]{9,12}$/;
   $phone= document.getElementById('phone').value;
-
-
+  
   if(!val_phone.test($phone)){
-     alert("enter valid phone Number ");
-     document.getElementById('phone').value='';
+    alert("Enter Valid phone number");
+    document.getElementById('phonep').value='';
      $("#phone").focus();
      return false;
    }
@@ -45,13 +86,23 @@ function u(){
 
 
 
+function password(){
+  var val_password=  /^[A-Za-z]\w{5,14}$/;
+  $password= document.getElementById('password').value;
+  document.getElementById('passp').innerHTML='';
+  if(!val_password.test($password)){
+     
+     document.getElementById('password').innerHTML='Enter a Valid password. first letter mustbe a letter';
+     $("#password").focus();
+     return false;
+   }
+}
 function ps(){
   var val_password=  /^[A-Za-z]\w{5,14}$/;
   $password= document.getElementById('password').value;
-
-
+  
   if(!val_password.test($password)){
-     alert("Enter valid password! first character must be a letter");
+     alert("Atleast 6 characters needed first charecter must be a letter");
      document.getElementById('password').value='';
      $("#password").focus();
      return false;
@@ -61,16 +112,14 @@ function ps(){
 
 
 
-
 function em(){
   var val_email=  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   $email= document.getElementById('email').value;
-
-
+ 
   if(!val_email.test($email)){
-     alert("Enter valid email");
+     alert("enter a valid Email ID")
      document.getElementById('email').value='';
-     $("#emaild").focus();
+     $("#email").focus();
      return false;
    }
 }
@@ -124,4 +173,18 @@ function cv(){
      $("#cvv").focus();
      return false;
    }
+
+   function cin(){
+    var val_cin=  /^([L|U]{1})([0-9]{5})([A-Za-z]{2})([0-9]{4})([A-Za-z]{3})([0-9]{6})$/;
+    $cin= document.getElementById('cin').value;
+    
+    if(!val_cin.test($cin)){
+       alert("Enter Correct CIN number");
+       document.getElementById('cin').value='';
+       $("#cin").focus();
+       return false;
+     }
+  }
+  
+   
 }

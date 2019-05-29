@@ -14,37 +14,26 @@ class CreateAddFeaturesTable extends Migration
     public function up()
     {
         Schema::create('add_features', function (Blueprint $table) {
-            $table->bigIncrements('tid');
-            $table->string('email');
+            $table->bigIncrements('varient_id');
             $table->string('car_id');
+            $table->foreign('car_id')->references('car_id')->on('add_cars');
             $table->string('image');
             $table->string('cartype');
             $table->string('varient');
-            $table->string('engine');
-            $table->string('fuel');
-            $table->string('milage');
+            $table->string('entype');
+            $table->string('endes');
+            $table->string('cc');
             $table->string('power');
             $table->string('torque');
-            $table->string('seat');
+            $table->string('cylinder');
+            $table->string('valves');
+            $table->string('dtype');
+            $table->string('fsupply');
             $table->string('trans');
             $table->string('gear');
-            $table->string('speed');
-            $table->string('acceleration');
-            $table->string('fsuspension');
-            $table->string('rsuspension');
-            $table->string('frontbrake');
-            $table->string('rearbrake');
-            $table->string('tradius');
-            $table->string('length');
-            $table->string('width');
-            $table->string('height');
-            $table->string('ground');
-            $table->string('wheelbase');
-            $table->string('kerb');
-            $table->string('grossw');
-            $table->string('cargo');
-            $table->string('door');
-            $table->timestamps();
+            $table->string('clutch');
+            $table->integer('price');
+            
         });
     }
 

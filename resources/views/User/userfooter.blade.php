@@ -19,7 +19,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-footer-widget mb-80">
 
-                        <h5 class="widget-title">Our Blog</h5>
+                        {{-- <h5 class="widget-title">Our Blog</h5> --}}
 
 
                         
@@ -34,10 +34,10 @@
 
 
                         <ul class="footer-nav">
-                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
+                            {{-- <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
+                            <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li> --}}
                         </ul>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                         <span>Subscribe our newsletter gor get notification about new updates.</span>
 
 
-                        <form action="index.html" class="nl-form">
+                        <form action="#+" class="nl-form">
                             <input type="email" class="form-control" placeholder="Enter your email...">
                             <button type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
                         </form>

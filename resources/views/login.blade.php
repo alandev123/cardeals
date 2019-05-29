@@ -51,9 +51,9 @@
 					<li class="">
 						<a href="/firstreg" class="">Register</a>
 					</li>
-					<li class="">
-						<a href="#" class="">Contact</a>
-					</li>
+					{{-- <li class="">
+						<a href="#" class="">Dealer</a>
+					</li> --}}
 				</ul>
 			</div>
 		</div>

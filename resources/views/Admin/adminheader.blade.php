@@ -121,13 +121,13 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand" href="index.html"><span class="fa fa-area-chart"></span> Glance<span class="dashboard_text">Design dashboard</span></a></h1>
+            <h1><a class="navbar-brand" href="/adminhome"><span class="fa fa-area-chart"></span> CarDeals<span class="dashboard_text">Admin Dashboard</span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
               <li class="header">MAIN NAVIGATION</li>
               <li class="treeview">
-                <a href="index.html">
+                <a href="/adminhome">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                 </a>
               </li>
@@ -138,38 +138,39 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="/approvec"><i class="fa fa-angle-right"></i> View</a></li>
-                  <li><a href="media.html"><i class="fa fa-angle-right"></i> Media Css</a></li>
+                  <li><a href="/approvec"><i class="fa fa-angle-right"></i>Approve</a></li>
+                  <li><a href="/blockc"><i class="fa fa-angle-right"></i>Block</a></li>
+									<li><a href="/unblockc"><i class="fa fa-angle-right"></i>Unblock</a></li>
+									
                 </ul>
               </li>
               <li class="treeview">
-                <a href="charts.html">
+                <a href="/adminad">
                 <i class="fa fa-pie-chart"></i>
-                <span>Charts</span>
-                <span class="label label-primary pull-right">new</span>
+                <span>Ads</span>
+                {{-- <span class="label label-primary pull-right">new</span> --}}
                 </a>
               </li>
               <li class="treeview">
               <li class="treeview">
                 <a href="#">
                 <i class="fa fa-laptop"></i>
-                <span>UI Elements</span>
+                <span>Generate Links</span>
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="general.html"><i class="fa fa-angle-right"></i> General</a></li>
-                  <li><a href="icons.html"><i class="fa fa-angle-right"></i> Icons</a></li>
-                  <li><a href="buttons.html"><i class="fa fa-angle-right"></i> Buttons</a></li>
-                  <li><a href="typography.html"><i class="fa fa-angle-right"></i> Typography</a></li>
+                  <li><a href="/generateman"><i class="fa fa-angle-right"></i> Manufacturer</a></li>
+                  {{-- <li><a href="/generatedeal"><i class="fa fa-angle-right"></i> Dealer</a></li> --}}
+                  
                 </ul>
               </li>
-			  <li>
-                <a href="widgets.html">
-                <i class="fa fa-th"></i> <span>Widgets</span>
-                <small class="label pull-right label-info">08</small>
+			   <li>
+                <a href="/feature">
+                <i class="fa fa-th"></i> <span>Featured Cars</span>
+                <small class="label pull-right label-info"></small>
                 </a>
               </li>
-              <li class="treeview">
+                  {{--<li class="treeview">
                 <a href="#">
                 <i class="fa fa-edit"></i> <span>Forms</span>
                 <i class="fa fa-angle-left pull-right"></i>
@@ -213,7 +214,7 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
               <li class="header">LABELS</li>
               <li><a href="#"><i class="fa fa-angle-right text-red"></i> <span>Important</span></a></li>
               <li><a href="#"><i class="fa fa-angle-right text-yellow"></i> <span>Warning</span></a></li>
-              <li><a href="#"><i class="fa fa-angle-right text-aqua"></i> <span>Information</span></a></li>
+              <li><a href="#"><i class="fa fa-angle-right text-aqua"></i> <span>Information</span></a></li> --}}
             </ul>
           </div>
           <!-- /.navbar-collapse -->

@@ -85,9 +85,23 @@ class ApproveCompanyController extends Controller
     }
     public function viewcompany()
     {
-        $cmp = DB::table('reg_companies')->where('utype', '=', 'COMPANY')->get();
+        $cmp = DB::table('first_regs')
+        ->join('reg_companies','first_regs.email','=','reg_companies.email')
+        ->where('utype', '=', 'COMPANY')->get();
        // $cmp = DB::select('select * from reg_companies where utype=COMPANY');
         return view('Admin.approvecompany',['request'=>$cmp]);
+    }
+    public function bcompany()
+    {
+        $cmp = DB::table('reg_companies')->where('utype', '=', 'COMPANY1')->get();
+       // $cmp = DB::select('select * from reg_companies where utype=COMPANY');
+        return view('Admin.blockcompany',['request'=>$cmp]);
+    }
+    public function unbcompany()
+    {
+        $cmp = DB::table('reg_companies')->where('utype', '=', 'BLOCKEDCMP')->get();
+       // $cmp = DB::select('select * from reg_companies where utype=COMPANY');
+        return view('Admin.unblockcompany',['request'=>$cmp]);
     }
     public function ajaxview(Request $request)
     {
@@ -100,10 +114,30 @@ class ApproveCompanyController extends Controller
         $utype = DB::table('logins')->select('utype')->get();
         if($utype='COMPANY'){
             DB::table('logins')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
-            DB::table('reg_companies')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
-            DB::table('first_regs')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
+             DB::table('first_regs')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
+            
             return redirect('/approvec');
         }
     }
+    public function block($cmp)
+    {
+        $utype = DB::table('logins')->select('utype')->get();
+        if($utype='COMPANY1'){
+            DB::table('logins')->where('email',$cmp)->update(['utype'=>'BLOCKEDCMP']);
+            DB::table('first_regs')->where('email',$cmp)->update(['utype'=>'BLOCKEDCMP']);
+            
+            return redirect('/blockc');
+        }
+    }
 
+    public function unblock($cmp)
+    {
+        $utype = DB::table('logins')->select('utype')->get();
+        if($utype='BLOCKEDCMP'){
+            DB::table('logins')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
+            DB::table('first_regs')->where('email',$cmp)->update(['utype'=>'COMPANY1']);
+            
+            return redirect('/unblockc');
+        }
+    }
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class AddCar extends Model
 {
   public $fillable = [
-    'email',
+    'company_id',
     'carname',
   ];
 }

@@ -6,6 +6,7 @@ use App\AddCar;
 use App\FirstReg;
 use App\login;
 use Illuminate\Http\Request;
+use DB;
 
 class AddCarController extends Controller
 {
@@ -41,10 +42,10 @@ class AddCarController extends Controller
       $a = FirstReg::where('email',$email)->get();
 
       foreach($a as $obj){
-        $email = $obj -> email;
+        $company_id = $obj -> id;
       }
       $ree = new AddCar([    //model name
-      'email'=> $email,
+      'company_id'=> $company_id,
       'carname'=> $request->get('carname'),
       ]);
       $ree->save();
@@ -99,4 +100,10 @@ class AddCarController extends Controller
     {
         return view('Company.AddCar');
     }
+    public function ads(Request $request)
+    {
+        $cca = DB::table('fuels')->get(); 
+        return view('Company.Ads',['request'=>$cca]);
+    }
+    
 }

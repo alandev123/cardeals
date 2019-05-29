@@ -14,6 +14,6 @@ class FirstReg extends Model
   'utype',
   'email',
   'phone',
-  'status',
+ 
 ];
 }

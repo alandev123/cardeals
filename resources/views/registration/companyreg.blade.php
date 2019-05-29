@@ -1,4 +1,4 @@
-@if(session()->has('email'))
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,7 +31,7 @@
     <div class="d-flex align-items-center" style="margin-top:1%;">
     <link rel="stylesheet" href="css/style1.css" type="text/css" media="all">
 
-
+ <script src="js/valid.js"></script>
       <link rel="stylesheet" href="css/font-awesome1.min.css" type="text/css" media="all">
 
 
@@ -68,23 +68,75 @@
                     
                     <form method="post" action="{{route('regconfirm.store')}}">
                       @csrf
+                      <div class="input-group">
+                        <input class="input--style-1" type="text" placeholder="COMPANY NAME" id="name" name="name" required onchange="n()" oninput="this.reportValidity()">
 
-											<div class="row row-space">
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1" type="text" placeholder="CIN NUMBER" name="cin" required>
-                                </div>
+                    </div>
+                  <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="STATE" id="state" name="state" required oninput="this.reportValidity()" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="DISTRICT" id="district" name="district" required oninput="this.reportValidity()" onkeyup="this.value = this.value.toUpperCase();">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row row-space">
+                        <div class="col-2">
+
+          <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="CITY" id="city" name="city" required oninput="this.reportValidity()" onkeyup="this.value = this.value.toUpperCase();">
                             </div>
 
-                            <div class="col-2">
-                                <div class="input-group">
-                                    <input class="input--style-1" type="text" placeholder="HEAD OFFICE" name="headoffice" required oninput="this.reportValidity()">
-                                </div>
-                            </div>
 
+                        </div>
+                        <div class="col-2">
+                          <div class="input-group">
+                              <input class="input--style-1" type="text" placeholder="HEAD OFFICE" name="headoffice" required oninput="this.reportValidity()">
+                          </div>
                       </div>
+                        {{-- <div class="col-2">
+                            <div class="input-group">
+                                <div class="rs-select2 js-select-simple select--no-search">
+                                    <select name="utype" id="utype" required oninput="this.reportValidity()">
+                                        <option disabled="disabled" selected="selected">USER TYPE</option>
+                                        <option>USER</option>
+                                        <option>COMPANY</option>
+                                        <option>DEALER</option>
+                                    </select>
+                                    <div class="select-dropdown"></div>
+                                </div>
+                            </div>
+                        </div> --}}
+                    </div>
 
 
+      <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="email" placeholder="EMAIL" id="email" name="email" onchange="em()" oninput="this.reportValidity()" required>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="text" placeholder="PHONE NUMBER" id="phone" name="phone" required pattern="[6-9][0-9]{9}"  title="phone number with 6-9 and remaining 9 digit with 0-9" onchange="p()" oninput="this.reportValidity()">
+                            </div>
+                        </div>
+
+                    </div>
+
+                                <div class="input-group">
+                                    <input class="input--style-1" type="text" placeholder="CIN NUMBER" name="cin" required onchange="cin()" oninput="this.reportValidity()">
+                                </div>
+                           
                         <div class="row row-space">
                               <div class="col-2">
                                   <div class="input-group">
@@ -99,6 +151,34 @@
                               </div>
 
                        </div>
+                       <div class="row row-space">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="password" placeholder="PASSWORD" id="password" name="password" required onchange="ps()" oninput="this.reportValidity()">
+                            </div>
+                        </div>
+
+
+                        <div class="col-2">
+                            <div class="input-group">
+                                <input class="input--style-1" type="password" placeholder="CONFIRM PASSWORD" id="password_confirm" oninput="check(this)" name="cpass" required>
+                                <input type="hidden" name="status" id='status' value="active" required>
+                            </div>
+                        </div>
+                        <script language='javascript' type='text/javascript'>
+                        function check(input) 
+                        {
+                            if(input.value != document.getElementById('password').value)
+                            {
+                                input.setCustomValidity('Passwords are not Matching');
+                            }
+                            else{
+                                input.setCustomValidity('');
+                            }
+
+                        } 
+                        </script>
+                    </div>  
 
                         </div>
   <center><h4>make sure the information provided is valid</h4></center>
@@ -130,4 +210,4 @@
 
 </html>
 <!-- end document-->
-@endif
+

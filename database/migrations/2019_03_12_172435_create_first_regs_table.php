@@ -22,7 +22,6 @@ class CreateFirstRegsTable extends Migration
             $table->string('utype');
             $table->string('email')->unique();
             $table->string('phone');
-            $table->string('status');
             $table->timestamps();
         });
     }

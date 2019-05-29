@@ -16,7 +16,7 @@
                 <nav class="classy-navbar justify-content-between" id="robertoNav">
 
 
-                    <a class="nav-brand" href="index.html"><img src="./img/core-img/logo2.png" alt=""></a>
+                    <a class="nav-brand" href="/userhome"><img src="./img/core-img/logo2.png" alt=""></a>
 
 
                     <div class="classy-navbar-toggler">
@@ -35,20 +35,27 @@
                               <li class="active"><a href="/userhome">Home</a></li>
                               <li><a href="#">Car</a>
                               <ul class="dropdown">
-                              <li><a href="#">- List Cars</a></li>
-                              <li><a href="#">- Compare Cars</a></li>
-                              <li><a href="#">- Edit</a></li>
+                              <li><a href="/uviewcar">- List Cars</a></li>
+                              <li><a href="/bookcar">- Book a Car</a></li>
+                              <li><a href="/ucompare">- Compare Cars</a></li>
+                              
                         </ul>
                         </li>
-
-                            <li><a href="#">Messages</a>
+                        <li><a href="/usedcarhome">Usedcar</a>
+                        <li><a href="#">Advices</a>
                               <ul class="dropdown">
-                              <li><a href="#">- Advices</a></li>
-                              <li><a href="#">- Requests</a></li>
-                              <li><a href="#">- Messages</a></li>
-                            </ul>
-                                </li>
-                                <li><a href="#">Booking</a></li>
+                              <li><a href="/advice">- Request</a></li>
+                              <li><a href="/suggest">- Make a suggestion</a></li>
+                              <li><a href="/myreq">- my requests</a></li>
+                              
+                        </ul>
+                        </li>
+                        
+                            
+                      </li>
+
+                            
+                                
                                 <li><a href="/logout">Logout</a></li>
                                 </ul>
 
@@ -59,7 +66,7 @@
 
 
         <div class="book-now-btn ml-3 ml-lg-5">
-      <a href="/cprofile">Profile<i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+   
       </div>
       </div>
 

@@ -8,7 +8,6 @@ class RegCompany extends Model
 {
   public $fillable = [
   'email',
-  'utype',
   'cin',
   'headoffice',
   'website',

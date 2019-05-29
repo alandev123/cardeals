@@ -17,7 +17,6 @@ class CreateRegCompaniesTable extends Migration
             $table->bigIncrements('company_id');
             $table->string('email');
             $table->foreign('email')->references('email')->on('first_regs');
-            $table->string('utype');
             $table->string('cin');
             $table->string('headoffice');
             $table->string('website');

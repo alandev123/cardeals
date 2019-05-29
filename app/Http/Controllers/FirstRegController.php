@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\FirstReg;
 use App\login;
+use App\DealerReg;
 use Illuminate\Http\Request;
 use Hash;
+use DB;
 
 class FirstRegController extends Controller
 {
@@ -37,15 +39,26 @@ class FirstRegController extends Controller
      */
     public function store(Request $request)
     {
+      $qe = DB::table('first_regs')->select('email')->get();
+      $abc= $request->get('email');
+      foreach($qe as $em){
+        if($em->email ==$abc){
+          echo "<script>alert('Email Already Exist')</script>";
+          return view("registration.firstreg");
+        }
+                
+      }
+      
+
       $ree = new FirstReg([    //model name
       'name'=> $request->get('name'),
       'state'=> $request->get('state'),
       'district'=> $request->get('district'),
       'city'=> $request->get('city'),
-      'utype'=> $request->get('utype'),
+      'utype'=> 'USER',
       'email'=> $request->get('email'),
       'phone'=> $request->get('phone'),
-      'status'=>'active',
+     
     ]);
     $ree->save();
     $pwd = $request->get('password');
@@ -54,7 +67,7 @@ class FirstRegController extends Controller
       'email'=>$request->get('email'),
       //'password'=> $request->get('password'),
       'password'=>$hash,
-      'utype'=> $request->get('utype'),
+      'utype'=> 'USER',
       
       'status'=>'active',
 
@@ -62,7 +75,7 @@ class FirstRegController extends Controller
     $logi->save();
     return redirect('/firstreg')->with('status','Registration Success');
     }
-
+    
     /**
      * Display the specified resource.
      *
@@ -106,5 +119,35 @@ class FirstRegController extends Controller
     public function destroy(FirstReg $firstReg)
     {
         //
+    }
+    public function upload(Request $request)
+    {
+      $ree = new FirstReg([    //model name
+      'name'=> $request->get('name'),
+      'state'=> $request->get('state'),
+      'district'=> $request->get('district'),
+      'city'=> $request->get('city'),
+      'utype'=> 'DEALER',
+      'email'=> $request->get('email'),
+      'phone'=> $request->get('phone'),
+      'status'=>'active',
+    ]);
+    $ree->save();
+    $pwd = $request->get('password');
+    $hash = Hash::make($pwd);
+    $logi = new login([
+      'email'=>$request->get('email'),
+      //'password'=> $request->get('password'),
+      'password'=>$hash,
+      'utype'=> 'DEALER',
+      
+      'status'=>'active',
+
+    ]);
+    $logi->save();
+    $ree = new DealerReg([    //model name
+        'name'=> $request->get('name'),
+    ]);
+    return redirect('/login')->with('status','Registration Success');
     }
 }

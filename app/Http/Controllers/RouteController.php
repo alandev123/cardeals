@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 class RouteController extends Controller
 {
     /**
@@ -97,6 +97,46 @@ class RouteController extends Controller
     // {
     //     return view('Admin.approvecompany');
     // }
+    public function advice()
+    {
+      return view('User.useradvice');
+    }
+    public function usedcarhome()
+    {
+      return view('User.Usedcarhome');
+    }
+    public function sellcar()
+    {
+      return view('User.Sellcar');
+    }
+    public function uhome()
+    {
+      return view('User.userhome');
+    }
+    public function ucompare()
+    {
+      return view('User.Usercomparecar');
+    }
+    public function usellcar()
+    {
+      return view('usellcar');
+    }
+    public function ucmore()
+    {
+      return view('ucmore');
+    }
 
 
+    
+
+
+    //adjustments
+
+    public function comparecompany(Request $request)
+    {   
+        $ca = DB::table('first_regs')->where('utype','COMPANY1')->get();
+        return view('User.Usercomparecar',['request'=>$ca]);
+    }
+    
+    
 }

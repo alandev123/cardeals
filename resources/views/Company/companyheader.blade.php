@@ -15,7 +15,7 @@
 
                 <nav class="classy-navbar justify-content-between" id="robertoNav">
 
-
+                
                     <a class="nav-brand" href="index.html"><img src="./img/core-img/logo2.png" alt=""></a>
 
 
@@ -37,18 +37,18 @@
                               <ul class="dropdown">
                               <li><a href="addcar">- Add Car</a></li>
                               <li><a href="/addfeat">- Add Features</a></li>
-                              <li><a href="#">- Edit</a></li>
+                              <li><a href="/companyviewcar">- View Cars</a></li>
                         </ul>
                         </li>
 
                             <li><a href="#">Dealer</a>
                               <ul class="dropdown">
-                              <li><a href="#">- View</a></li>
-                              <li><a href="#">- Requests</a></li>
-                              <li><a href="#">- Messages</a></li>
+                              <li><a href="/viewdealer">- View</a></li>
+                              <li><a href="/approvedealer">- Approve</a></li>
+                              <li><a href="/invitedealer">- Invite</a></li>
                             </ul>
                                 </li>
-                                <li><a href="#">Feedback</a></li>
+                                <li><a href="/ads">Ads</a></li>
                                 <li><a href="/logout">Logout</a></li>
                                 </ul>
 

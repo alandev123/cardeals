@@ -61,7 +61,7 @@
                           <th>City</th>
                           <th>Email</th>
                           <th>Phone</th>
-                          <th>Status</th>
+                          
                           
                           </tr> 
                           </thead>

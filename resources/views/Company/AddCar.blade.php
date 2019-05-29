@@ -48,8 +48,8 @@
                      @csrf
                          <div class="row justify-content-between align-items-center">
                              <div class="col-6 col-md-2 col-lg-3">
-                                 <label for="carname">Car Name</label>
-                                 <input type="text" class="form-control" name="carname">
+                                 <label for="carname">Model Name</label>
+                                 <input type="text" class="form-control" name="carname" required>
                                  <input type="hidden" name="hidemail" value="{{session('email')}}">
                                  @if(isset($success))
                                    {{$success}}
@@ -112,4 +112,7 @@
 </body>
 
 </html>
+
+
+
 @endif

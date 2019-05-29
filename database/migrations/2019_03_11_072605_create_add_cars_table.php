@@ -15,8 +15,9 @@ class CreateAddCarsTable extends Migration
     {
         Schema::create('add_cars', function (Blueprint $table) {
             $table->bigIncrements('car_id');
-            $table->string('email');
-            $table->string('carname');
+            $table->string('company_id');
+            $table->string('carname')->unique();
+            $table->integer('rating');
             $table->timestamps();
         });
     }

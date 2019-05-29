@@ -7,7 +7,7 @@
                 <div class="col-12 col-sm-6 col-lg-3">
                     <div class="single-footer-widget mb-80">
 
-                        <a href="#" class="footer-logo"><img src="img/core-img/logo2.png" alt=""></a>
+                        <a href="#" class="footer-logo"><img src="{{ asset('img/core-img/logo2.png" alt=""')}}></a>
 
                         <h4>+91 7561008226</h4>
                         <span>cardeals@gmail.coom</span>
@@ -42,12 +42,12 @@
                         <h5 class="widget-title">Links</h5>
 
 
-                        <ul class="footer-nav">
+                        {{-- <ul class="footer-nav">
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> About Us</a></li>
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Our Room</a></li>
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> Career</a></li>
                             <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> FAQs</a></li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
 
@@ -82,12 +82,12 @@
                 </div>
                 <div class="col-12 col-md-4">
 
-                    <div class="social-info">
+                    {{-- <div class="social-info">
                         <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

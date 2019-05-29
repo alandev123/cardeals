@@ -60,7 +60,7 @@ class LoginController extends Controller
                  {
                     session(['utype' => $utype]);
                     session(['email' => $email]);
-                 return view('Dealer.dealerhome');//->with('ccs',$value);
+                 return view('Dealer.dealerhome');;
                  }
                  elseif($object->utype =='ADMIN')
                  {
@@ -70,15 +70,21 @@ class LoginController extends Controller
                  }
                  elseif($object->utype =='COMPANY')
                   {
-                    session(['utype' => $utype]);
-                    session(['email' => $email]);
-                    return view('registration.companyreg'); //->with('ccs',$value);
+                    // session(['utype' => $utype]);
+                    // session(['email' => $email]);
+                    // return view('registration.companyreg'); //->with('ccs',$value);
+                    $msg = [
+                        'msg'=>'Please wait for approval before login',
+                ];
                   }
                  elseif($object->utype =='DEALER')
                   {
-                    session(['utype' => $utype]);
-                    session(['email' => $email]);
-                    return redirect('/');
+                    // session(['utype' => $utype]);
+                    // session(['email' => $email]);
+                    // return redirect('/');
+                    $msg = [
+                        'msg'=>'Please wait for approval before login',
+                ];
                   }
                  else
                  {
